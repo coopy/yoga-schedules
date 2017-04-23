@@ -19,8 +19,7 @@
         content: '💮 ';
       }
       .menuitem:hover, .menuitem-active {
-        color: #fff;
-        background-color: #aaa;
+        border-bottom: 2px solid blue;
       }
     </style>
   </head>
@@ -35,11 +34,11 @@
       <a class="menuitem" href="https://clients.mindbodyonline.com/classic/mainclass?studioid=220773&tg=&vt=&lvl=&stype=-7&view=week&trn=0&page=&catid=&prodid=&date=4%2f23%2f2017&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=2">Bohemian Studios, Phinney</a>
     </div>
 
-    <iframe id="frame" style="height:85vh; width:95vw"></iframe>
+    <iframe id="schedule-frame" style="height:85vh; width:95vw"></iframe>
 
     <script>
       // const frames
-      const frame = document.querySelector('#frame');
+      const scheduleFrame = document.querySelector('#schedule-frame');
       const menuitems = document.querySelectorAll('a.menuitem');
       menuitems.forEach(link => {
         link.addEventListener('click', ev => {
@@ -48,7 +47,7 @@
           const url = target.href;
           menuitems.forEach(node => node.classList.remove('menuitem-active'));
           target.classList.add('menuitem-active');
-          frame.src = url;
+          scheduleFrame.src = url;
         });
       });
     </script>
