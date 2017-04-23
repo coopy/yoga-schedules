@@ -1,19 +1,26 @@
 <!doctype html>
 <html>
   <head>
+    <meta charset="utf-16"/>
     <style rel="stylesheet" type="text/css">
       .menu {
         margin: 1em;
         line-height: 1.5em;
+        position: sticky;
+        top: 0px;
+        background-color: #fff;
       }
       .menuitem {
         margin-right: 1em;
         white-space: nowrap;
         text-decoration: none;
       }
+      .menuitem:before {
+        content: '💮 ';
+      }
       .menuitem:hover, .menuitem-active {
-        color: #eee;
-        background-color: blue;
+        color: #fff;
+        background-color: #aaa;
       }
     </style>
   </head>
@@ -28,7 +35,7 @@
       <a class="menuitem" href="https://clients.mindbodyonline.com/classic/mainclass?studioid=220773&tg=&vt=&lvl=&stype=-7&view=week&trn=0&page=&catid=&prodid=&date=4%2f23%2f2017&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=2">Bohemian Studios, Phinney</a>
     </div>
 
-    <iframe id="frame" style="height:100vh; width:100vw"></iframe>
+    <iframe id="frame" style="height:85vh; width:95vw"></iframe>
 
     <script>
       // const frames
