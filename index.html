@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <style rel="stylesheet" type="text/css">
+      .menu {
+        margin: 1em;
+        line-height: 1.5em;
+      }
+      .menuitem {
+        margin-right: 1em;
+        white-space: nowrap;
+        text-decoration: none;
+      }
+      .menuitem:hover, .menuitem-active {
+        color: #eee;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <a class="menuitem" href="http://8limbsyoga.com/schedule/?studio_id=170">8 Limbs, Phinney</a>
+      <a class="menuitem" href="http://twistyogaedmonds.com/classes/">Twist, Edmonds</a>
+      <a class="menuitem" href="http://aditistudio.com/yoga/">Aditi, Wallingford</a>
+      <a class="menuitem" href="http://seattleiyengaryoga.com/yoga-class-schedule/">Iyengar Yoga, Ballard</a>
+      <a class="menuitem" href="http://balayoga.com/classes/">Bala Yoga, Fremont</a>
+      <a class="menuitem" href="https://thegrinningyogiseattle.com/#block-a2936bc04114529f7964">The Grinning Yogi, Greenwood</a>
+      <a class="menuitem" href="https://clients.mindbodyonline.com/classic/mainclass?studioid=220773&tg=&vt=&lvl=&stype=-7&view=week&trn=0&page=&catid=&prodid=&date=4%2f23%2f2017&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=2">Bohemian Studios, Phinney</a>
+    </div>
+
+    <iframe id="frame" style="height:100vh; width:100vw"></iframe>
+
+    <script>
+      // const frames
+      const frame = document.querySelector('#frame');
+      const menuitems = document.querySelectorAll('a.menuitem');
+      menuitems.forEach(link => {
+        link.addEventListener('click', ev => {
+          ev.preventDefault();
+          const target = ev.target;
+          const url = target.href;
+          menuitems.forEach(node => node.classList.remove('menuitem-active'));
+          target.classList.add('menuitem-active');
+          frame.src = url;
+        });
+      });
+    </script>
+  </body>
+</html>
