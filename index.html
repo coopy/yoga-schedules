@@ -6,6 +6,7 @@
       .menu {
         margin: 1em;
         line-height: 1.5em;
+        font-size: 14pt;
         position: sticky;
         top: 0px;
         background-color: #fff;
@@ -20,6 +21,12 @@
       }
       .menuitem:hover, .menuitem-active {
         border-bottom: 2px solid blue;
+      }
+      @media (max-width: 414px) {
+        .menuitem {
+          line-height: 1.5em;
+          font-size: 18pt;
+        }
       }
     </style>
   </head>
