@@ -12,14 +12,20 @@
         position: sticky;
         top: 0px;
         background-color: #fff;
+        list-style-type: none;
+        display: inline-block;
+      }
+      .menu li {
+        text-decoration: none;
+        display: inline-block;
+      }
+      .menu li:before {
+        content: "💮";
+        padding-right: .5em;
       }
       .menuitem {
         margin-right: 1em;
         white-space: nowrap;
-        text-decoration: none;
-      }
-      .menuitem:before {
-        content: '💮 ';
       }
       .menuitem:hover, .menuitem-active {
         border-bottom: 2px solid blue;
@@ -33,15 +39,15 @@
     </style>
   </head>
   <body>
-    <div class="menu">
-      <a class="menuitem" href="http://8limbsyoga.com/schedule/?studio_id=170/#3027187489c">8 Limbs, Phinney</a>
-      <a class="menuitem" href="http://twistyogaedmonds.com/classes/">Twist, Edmonds</a>
-      <a class="menuitem" href="http://aditistudio.com/yoga/#block-yui_3_17_2_2_1467743435124_8903">Aditi, Wallingford</a>
-      <a class="menuitem" href="http://seattleiyengaryoga.com/yoga-class-schedule/#custom_post_widget-1673">Iyengar Yoga, Ballard</a>
-      <a class="menuitem" href="http://balayoga.com/classes/#hc-schedule">Bala Yoga, Fremont</a>
-      <a class="menuitem" href="https://thegrinningyogiseattle.com/#block-a2936bc04114529f7964">The Grinning Yogi, Greenwood</a>
-      <a class="menuitem" href="http://www.shreeyogataos.com/test/#block-yui_3_17_2_16_1448047330095_206840">Shree Yoga, Taos NM</a>
-    </div>
+    <ul class="menu">
+      <li><a class="menuitem" href="http://8limbsyoga.com/schedule/?studio_id=170/#3027187489c">8 Limbs, Phinney</a>
+      <li><a class="menuitem" href="http://twistyogaedmonds.com/classes/">Twist, Edmonds</a></li>
+      <li><a class="menuitem" href="http://aditistudio.com/yoga/#block-yui_3_17_2_2_1467743435124_8903">Aditi, Wallingford</a></li>
+      <li><a class="menuitem" href="http://seattleiyengaryoga.com/yoga-class-schedule/#custom_post_widget-1673">Iyengar Yoga, Ballard</a></li>
+      <li><a class="menuitem" href="http://balayoga.com/classes/#hc-schedule">Bala Yoga, Fremont</a></li>
+      <li><a class="menuitem" href="https://thegrinningyogiseattle.com/#block-a2936bc04114529f7964">The Grinning Yogi, Greenwood</a></li>
+      <li><a class="menuitem" href="http://www.shreeyogataos.com/test/#block-yui_3_17_2_16_1448047330095_206840">Shree Yoga, Taos NM</a></li>
+    </ul>
 
     <iframe id="schedule-frame" style="height:85vh; width:95vw"></iframe>
 
